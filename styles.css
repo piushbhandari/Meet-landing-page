@@ -94,7 +94,6 @@ body {
   line-height: 2.6rem;
 }
 .section-hero__cta-box {
-  border: 1px solid red;
   gap: 1.6rem;
   justify-content: center;
 }
@@ -125,13 +124,11 @@ body {
   background: #b188dd;
 }
 .section-gallery {
-  border: 1px solid cadetblue;
   padding: 0 3.9rem;
   margin-bottom: 8rem;
 }
 .section-gallery__pics {
   max-width: 111rem;
-  border: 1px solid red;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -141,6 +138,32 @@ body {
 .section-gallery__pic img {
   border-radius: 8px;
 }
+.section-about {
+  margin-bottom: 7.2rem;
+}
+.section-about__cont {
+  margin: 0 auto;
+  max-width: 54rem;
+  text-align: center;
+}
+.section-about__sub-header {
+  font-weight: 900;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  color: #4d96a9;
+  letter-spacing: 4px;
+  margin-bottom: 1.6rem;
+}
+.section-about__secondary-header {
+  font-weight: 900;
+  font-size: 4rem;
+  line-height: 4.4rem;
+  color: #28283d;
+  max-width: 44.5rem;
+  margin: 0 auto;
+  margin-bottom: 3.2rem;
+}
+
 .footer {
   background-image: url("./assets/desktop/image-footer.jpg");
   background-size: cover;
@@ -148,6 +171,75 @@ body {
   background-color: #4d96a9;
   background-blend-mode: multiply;
   height: 30.8rem;
+  padding: 0 2.4rem;
+  position: relative;
+}
+.footer__cont {
+  color: #fafafa;
+  width: 100%;
+  max-width: 111rem;
+}
+.footer__title {
+  font-weight: 900;
+  font-size: 4rem;
+  line-height: 4.4rem;
+  max-width: 35rem;
+}
+.footer__final-thoughts {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  max-width: 35rem;
+}
+.footer__cta {
+  font-weight: 900;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  color: white;
+  background: #855fb1;
+  border-radius: 29px;
+  padding: 1.6rem 4rem;
+}
+.footer__cta span {
+  color: #d9b8ff;
+}
+.footer__cta:hover,
+.footer__cta:focus {
+  background: #b188dd;
+}
+
+.breakpoint {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+.breakpoint__linebreak {
+  width: 1px;
+  height: 84px;
+  border: 1px solid rgba(135, 135, 157, 0.25);
+}
+.breakpoint__numberbox {
+  border-radius: 50%;
+  border: 1px solid rgba(135, 135, 157, 0.25);
+  width: 56px;
+  height: 56px;
+  background: white;
+}
+.breakpoint__number {
+  font-weight: 900;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  color: #87879d;
+}
+.breakpoint__1 {
+  margin-bottom: 6.4rem;
+}
+.breakpoint__2 {
+  margin-bottom: -2.8rem;
+  position: relative;
+  z-index: 2;
 }
 @media all and (max-width: 1246px) {
   .section-hero {
@@ -165,21 +257,42 @@ body {
     display: flex;
   }
 }
+@media all and (max-width: 943px) {
+  .footer {
+    height: 42.8rem;
+  }
+  .footer__cont {
+    flex-direction: column;
+    gap: 3.2rem;
+    text-align: center;
+  }
+}
 @media all and (max-width: 768px) {
+  .section-hero {
+    margin-bottom: 8rem;
+  }
   .section-gallery__pics {
     column-gap: 1.1rem;
   }
+  .section-about__cont {
+    max-width: 57.3rem;
+  }
   .footer {
     background-image: url("./assets/tablet/image-footer.jpg");
+  }
+  .footer__final-thoughts {
+    max-width: 57.3rem;
   }
 }
 @media all and (max-width: 600px) {
   body {
     padding-top: 4.8rem;
   }
-  .section-gallery {
+  .section-gallery,
+  .section-about {
     padding: 0 2.4rem;
   }
+
   .section-gallery__pics {
     grid-template-columns: repeat(2, 1fr);
     gap: 2.4rem 2.5rem;
@@ -199,13 +312,30 @@ body {
   }
   .section-hero__cta-box {
     flex-direction: column;
-    /* width: initial;
-    margin: 0 auto; */
+    align-items: center;
+    margin: 0 auto;
+  }
+  .section-hero__cta-box > * {
+    padding: 1.6rem 2.9rem;
+  }
+  .section-about__secondary-header {
+    font-size: 3.2rem;
+    line-height: 3.6rem;
   }
 }
 @media all and (max-width: 375px) {
+  .section-hero {
+    margin-bottom: 6.4rem;
+  }
   .footer {
     background-image: url("./assets/mobile/image-footer.jpg");
+  }
+  .footer__cont {
+    gap: 2.4rem;
+  }
+  .footer__title {
+    font-size: 3.2rem;
+    line-height: 3.6rem;
   }
 }
 @media all and (max-width: 374px) {
