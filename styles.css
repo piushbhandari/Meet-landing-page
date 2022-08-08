@@ -60,9 +60,11 @@ body {
   margin-bottom: 6.1rem;
 }
 .section-hero {
+  border: 1px solid black;
   margin-bottom: 11rem;
   display: flex;
   gap: 8.8rem;
+  justify-content: center;
   overflow: hidden;
 }
 .section-hero__imgbox--left {
